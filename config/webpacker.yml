@@ -16,11 +16,12 @@ default: &default
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true
 
   static_assets_extensions:
     - .jpg
     - .jpeg
+    - .jsx
     - .png
     - .gif
     - .tiff
@@ -35,6 +36,7 @@ default: &default
   extensions:
     - .mjs
     - .js
+    - .jsx
     - .sass
     - .scss
     - .css
@@ -83,10 +85,10 @@ production:
   <<: *default
 
   # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  compile: true
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true
 
   # Cache manifest.json for performance
   cache_manifest: true

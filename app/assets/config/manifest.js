@@ -1,2 +1,16 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
+{
+    "application.js": "/packs/js/application-9afcbb5693aa87623e69.js",
+    "application.js.map": "/packs/js/application-9afcbb5693aa87623e69.js.map",
+    "entrypoints": {
+      "application": {
+        "js": [
+          "/packs/js/application-9afcbb5693aa87623e69.js"
+        ],
+        "js.map": [
+          "/packs/js/application-9afcbb5693aa87623e69.js.map"
+        ]
+      }
+    }
+  }
