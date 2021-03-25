@@ -1,0 +1,41 @@
+<%if @students.errors.any?%>
+  <%= pluralize(@students.errors.count, "error")%>
+    prohibited your profile from being created
+  <ul>
+       <% @students.errors.full_messages.each do |message|%>
+        <li><%= message%>
+        <%end%>
+   </ul>
+<%end%>      
+
+
+<div class="container">
+  <div class="row center sign-up-form">
+      <div class="col s12 m12 l12">
+          <div class="card-panel">
+            <h3 clas="header">sign up!</h3>
+            <div class="row">
+            <%=form_for(@students, html: {class: "col s12"}) do |f|%>
+                <div class ="row">
+                    <div class ="input-field col s12">
+                    <%= f.text_field :name, placeholder:"Enter your full name",autofocus: true%>
+                    <%= f.label :name%>
+                    </div>
+                </div>   
+                <div class ="row">
+                    <div class ="input-field col s12">
+                    <%= f.email_field :email, placeholder:"Enter your email_id"%>
+                    <%=f.label :email%>
+                    </div>
+                </div> 
+                  <div class ="row">
+                    <div class ="input-field col s12">
+                        <%=f.submit "sign_up" ,class:"btn orange waves-effect waves-light"%>
+                     </div>
+                  </div>      
+            <%end%>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
